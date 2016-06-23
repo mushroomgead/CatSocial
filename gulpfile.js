@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
-var htmlmin = require('gulp-htmlmin');
+//var htmlmin = require('gulp-htmlmin');
 var browserSync = require('browser-sync');
-// สร้าง task ที่มีชื่อว่า "siamhtml"
+
 gulp.task('gead', function() {
     console.log('gead');
 });
@@ -27,16 +27,29 @@ gulp.task('sass', function(){
 
 // สร้าง task ชื่อว่า "browser-sync" ขึ้นมา พร้อมกับระบุงานที่จะให้ task นี้ทำ
 gulp.task('browser-sync', function() {
-    browserSync({
+    browserSync.init({
+        ui:{
         server: {
-            baseDir: "./"
-        }
+            baseDir: "./gead_1"
+        },
+        	port: 8080
+        },
     });
 });
+/*gulp.task('browser-sync', function() {
+	browserSync({
+		proxy: {
+		host: "./gead_1",
+		port: 8080
+		}
+	});
+});*/
+
 //defult task
 gulp.task('default', ['browser-sync'], function(){
 	// เมื่อไฟล์ html หรือ css มีการเปลี่ยนแปลง ก็ให้รีเฟรช web browser
     gulp.watch(['**/*.html'], browserSync.reload);
+    //gulp.watch(['**/*.php'], browserSync.reload);
     gulp.watch(['css/**/*.css'], browserSync.reload);
 
     // เมื่อไฟล์ scss มีการเปลี่ยนแปลง ก็ให้ทำ task "sass"
