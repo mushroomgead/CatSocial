@@ -1,0 +1,37 @@
+<style type="text/css">
+	.index-header{
+	  background-color: #ffffff;
+	  padding-bottom: 2%;
+	}
+	.index-body{
+
+	}
+	.text-header{
+		padding-top: 2%;
+	}
+	.test{
+		background:#000000;
+	}
+	.border-head{
+		border:1px solid #000000;
+	}
+	.demo {
+	    width:420px;
+	}
+	ul {
+	    list-style: none outside none;
+	    padding-left: 0;
+	    margin-bottom:0;
+	}
+	li {
+	    display: block;
+	    float: left;
+	    margin-right: 6px;
+	    cursor:pointer;
+	}
+	img {
+	    display: block;
+	    height: auto;
+	    max-width: 100%;
+	}
+</style>
