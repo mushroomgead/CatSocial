@@ -1,3 +1,1 @@
 # CatSocial
-# PhotoGraphy
-# PhotoGraphy
